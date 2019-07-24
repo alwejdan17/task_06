@@ -19,10 +19,10 @@ def restaurant_detail(request, restaurant_id):
     return render(request, 'detail.html', context)
 
 def restaurant_create(request):
-    form=RestaurantForm()
+    form=RestaurantForm()#create empy form
     #check if reciving data
     if request.method=="POST":
-        form=RestaurantForm(request.POST)
+        form=RestaurantForm(request.POST)#store data in form which I created
         if form.is_valid():
             form.save()
             return redirect('restaurant-list')

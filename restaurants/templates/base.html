@@ -1,0 +1,36 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+                {% block title %}
+                {% endblock%}
+        </title>
+        <link rel="stylesheet" href="{%static 'custom.css' %}">
+        
+    </head>
+    <body class="body_page">
+    
+    <div id="nav_bar">
+        <header>
+        Restaurants Website
+        </header>
+
+    </div>
+
+    {% block content %}
+    {% endblock%}
+    
+    <div id="footer_master" with="150px" hieght="60%">
+
+        <footer>
+            <p>
+               this website for commans restaurants in saudi arabia
+            </p>
+        </footer>
+    </div>
+
+
+    </body>
+</html>
